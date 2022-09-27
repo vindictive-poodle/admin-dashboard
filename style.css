@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #4c1d95, #17141F);
+  font-family: 'Barlow', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.page-container {
+  display: grid;
+  border-radius: 20px;
+  background-color: rgb(245, 245, 240);
+  width: 92vw;
+  height: 95vh;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 2fr 8fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main-content";
+}
+
+
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  padding-left: 30px;
+}
+
+.sidebar-options-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 2rem);
+  row-gap: 20px;
+  padding-top: 80px;
+}
+
+.sidebar .dash {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+.sidebar-options-container > :nth-child(1n) {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 3fr;
+}
+
+.image {
+  width: 1.5rem; 
+}
+
+.messages .image {
+  content: url('./imgs/email-outline.svg');
+}
+
+.settings .image {
+  content: url('./imgs/cog-outline.svg');
+}
+
+.tasks .image {
+  content: url('./imgs/clipboard-list-outline.svg');
+}
+
+.profile .image {
+  content: url('./imgs/card-account-details-outline.svg');
+}
+
+.privacy .image {
+  content: url('./imgs/shield-account-outline.svg');
+}
+
+.main-content {
+  grid-area: main-content;
+}
+
