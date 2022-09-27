@@ -19,6 +19,7 @@ body {
   display: grid;
   border-radius: 20px;
   background-color: rgb(245, 245, 240);
+  box-shadow: black 8px 8px 15px;
   width: 92vw;
   height: 95vh;
   grid-template-columns: 1fr 5fr;
@@ -28,10 +29,28 @@ body {
     "sidebar main-content";
 }
 
-
-
 .header {
   grid-area: header;
+  display: grid;
+}
+
+.top-header {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.top-header > input {
+  appearance: none;
+  width: 60%;
+  height: 3rem;
+  border: 3px solid black;
+  border-radius: 15px;
+  box-shadow: inset 2px 2px 8px slategray;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 1.5rem;
 }
 
 .sidebar {
@@ -49,7 +68,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, 2rem);
-  row-gap: 20px;
+  row-gap: 30px;
   padding-top: 80px;
 }
 
@@ -57,15 +76,18 @@ body {
   display: grid;
   align-items: center;
   grid-template-columns: 1fr;
+  font-size: 2rem;
 }
+
 .sidebar-options-container > :nth-child(1n) {
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 4rem 3fr;
 }
 
 .image {
-  width: 1.5rem; 
+  width: 40px;
+  height: 40px;
 }
 
 .messages .image {
@@ -92,3 +114,38 @@ body {
   grid-area: main-content;
 }
 
+.main-content .bg-image {
+  display: block;
+  position: absolute;
+  background-image: url('./imgs/rocket_green.svg');
+  background-repeat: no-repeat;
+  width: 60vw;
+  height: 70vh;
+  left: 35vw;
+  top: 25vh; 
+  opacity: 30%;
+}
+
+.top-header > span {
+  display: block;
+  background-image: url('./imgs/magnify.svg');
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  justify-self: end;
+
+}
+.sidebar-options-container > div:hover {
+  transform: scale(1.2);
+}
+
+.user-icon {
+/*  display: block; */
+/*  position: absolute; */
+/*  background-image: url('./imgs/day18-floppy.svg'); */
+/*  background-repeat: no-repeat; */
+/*  width: 80px; */
+/*  height: 80px; */
+/*  background-size: 100%; */
+/*  border-radius: 50%; */
+}
