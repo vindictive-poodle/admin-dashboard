@@ -78,8 +78,13 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
   justify-self: end;
+  transition: 1s all;
 }
 
+
+.header input[type='button']:active {
+  transform: scale(0.8);
+}
 .top-header > input[type='search'] {
   appearance: none;
   width: 90%;
