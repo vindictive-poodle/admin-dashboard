@@ -78,12 +78,12 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
   justify-self: end;
-  transition: 1s all;
+  transition: 0.5s all;
 }
 
 
 .header input[type='button']:active {
-  transform: scale(0.8);
+  transform: scale(0.9);
 }
 .top-header > input[type='search'] {
   appearance: none;
@@ -251,6 +251,12 @@ body {
   display: grid;
   padding: 15px 25px;
   row-gap: 10px;
+  transition: 0.5s all;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 5px 5px 10px black;
 }
 
 .card > p:first-of-type {
@@ -263,10 +269,10 @@ body {
 .stripe {
   position: absolute;
   display: block;
-  height: 102%;
+  height: 102.5%;
   width: 17px;
   border-top-left-radius: 55px;
-  border-bottom-left-radius: 45px;
+  border-bottom-left-radius: 55px;
   background-color: #eab308;
   left: -1%;
   top: -1%;
