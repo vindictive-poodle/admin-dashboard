@@ -22,9 +22,9 @@ body {
   display: grid;
   gap: 30px;
   height: 100vh;
-  border-radius: 125px;
+  border-radius: 145px;
   background-color: #cffafe;
-  box-shadow: inset gray 8px 8px 25px, black 8px 8px 15px;
+  box-shadow: black 8px 8px 15px;
   padding: 25px 50px 25px 10px;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 1fr 8fr;
@@ -43,7 +43,6 @@ body {
   grid-template-columns: 1fr; 
   grid-template-rows: 100px 100px;
   z-index: 4;
-  padding-top: 20px;
 }
 
 .greeting > p:first-child {
@@ -54,6 +53,7 @@ body {
   font-size: 2rem;
   font-weight: 600;
 }
+
 .top-header,
 .bottom-header {
   display: grid;
@@ -71,10 +71,10 @@ body {
 .header input[type='button'] {
   appearance: none;
   background-color: #eab308;
-  border: 2px solid #eab308;
   color: rgb(0,0,0);
   width: 120px;
   height: 50px;
+  border: 2px solid #eab308;
   border-radius: 10px;
   font-family: inherit;
   font-size: 1.5rem;
@@ -91,12 +91,12 @@ body {
   appearance: none;
   width: 90%;
   height: 3rem;
-  border: 3px solid #164e63;
-  border-radius: 15px;
+  border: 3px solid black;
+  border-radius: 20px;
   /* box-shadow: inset 2px 2px 8px slategray; */
   box-shadow: inset 2px 2px 8px #17141F;
   color: rgb(245, 245, 240);
-  padding: 0.8rem;
+  padding: 0.5rem;
   font-family: inherit;
   font-size: 1.5rem;
   font-weight: 600;
@@ -116,7 +116,6 @@ body {
   display: grid;
   grid-template-rows: 200px 4fr;
   padding-left: 30px;
-  padding-top: 20px;
 }
 
 .sidebar-options-container {
@@ -261,13 +260,11 @@ body {
   padding: 15px 25px;
   row-gap: 10px;
   transition: 0.5s all;
-  opacity: 96%;
 }
 
 .card:hover {
   transform: scale(1.02);
   box-shadow: 5px 5px 10px black;
-  opacity: 100%;
 }
 
 .card > p:first-of-type {
@@ -280,7 +277,7 @@ body {
 .stripe {
   position: absolute;
   display: block;
-  height: 102%;
+  height: 102.5%;
   width: 17px;
   border-top-left-radius: 55px;
   border-bottom-left-radius: 55px;
@@ -313,9 +310,23 @@ body {
   font-weight: 600;
 }
 
+.announcements-container > div {
+  position: relative;
+}
 
 .announcements-container > div > p:last-of-type {
   padding-top: 20px;
+}
+
+.announcements-container > div > span {
+  position: absolute;
+  display: block;
+  content: url('./imgs/Untitled_Artwork.png');
+  width: 500px;
+  height: 375px;
+  top: -60px;
+  left: -120px;
+  z-index: 8;
 }
 
 .announcements-container {
