@@ -13,7 +13,8 @@ body {
   height: 100vh;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  background: linear-gradient(to right, #4c1d95, #17141F);
+  /* background: linear-gradient(to right, #4c1d95, #17141F); */
+  background-color: #4c1d95;
   font-family: 'Barlow', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -21,7 +22,7 @@ body {
   display: grid;
   gap: 30px;
   height: 100vh;
-  border-radius: 50px;
+  border-radius: 145px;
   background-color: #cffafe;
   box-shadow: black 8px 8px 15px;
   padding: 25px 50px 25px 10px;
@@ -70,6 +71,7 @@ body {
 .header input[type='button'] {
   appearance: none;
   background-color: #eab308;
+  color: rgb(0,0,0);
   width: 120px;
   height: 50px;
   border: 2px solid #eab308;
@@ -85,16 +87,20 @@ body {
 .header input[type='button']:active {
   transform: scale(0.9);
 }
-.top-header > input[type='search'] {
+.top-header  input[type='search'] {
   appearance: none;
   width: 90%;
   height: 3rem;
   border: 3px solid black;
-  border-radius: 15px;
-  box-shadow: inset 2px 2px 8px slategray;
+  border-radius: 20px;
+  /* box-shadow: inset 2px 2px 8px slategray; */
+  box-shadow: inset 2px 2px 8px #17141F;
+  color: rgb(245, 245, 240);
   padding: 0.5rem;
   font-family: inherit;
   font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #4c1d95;
 }
 
 .top-header > input:focus {
@@ -178,6 +184,7 @@ body {
     width: 50px;
     height: 50px;
     background-size: 100%;
+    border: 1px solid black;
     border-radius: 50%;
     justify-self: end;
 }
@@ -216,7 +223,7 @@ body {
   top: 25vh; 
 }
 
-.top-header > .search-image {
+.top-header .search-image {
   display: block;
   background-image: url('./imgs/magnify.svg');
   background-repeat: no-repeat;
@@ -238,6 +245,7 @@ body {
   height: 80px;
   background-size: 100%;
   border-radius: 50%;
+  border: 2px solid black;
 }
 
 
@@ -326,6 +334,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 3fr;
   align-items: center;
+  column-gap: 15px;
 }
 
 .trending-container > div:first-child > span {
@@ -362,3 +371,4 @@ body {
 .dash > p {
   padding-top: 5px;
 }
+
